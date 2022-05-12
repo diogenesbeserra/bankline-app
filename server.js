@@ -1,22 +1,20 @@
 // importar express
 const express = require('express');
-
+const path = require('path');
 // iniciar express
 const app = express();
 
+const PORT = process.env.PORT || 8080;
+
 // nome da pasta no dist que será feito o build
-const appName = 'bankline-app-diogenes';
+const appName = 'bankline-app';
 
-//local que o build ira gerar os arquivos
+app.use(express.static(__dirname + '/dist/' + appName));
 
-const outputPath = `${__dirname}/dist/${appName}`;
+app.get('/*', (req, res) => {
+    res.sendFile(__dirname + '/dist/' + appName + '/index.html');
+});
 
-//seta o diretorio de build para servir o conteudo angular
-app.use(express.static(outputPath));
-
-//redirecionar qualquer requisicao opara o index
-app.get('/*', (req, res) => { 
-    res.sendFile(`${outputPath}/index.html `);
-} )
-
-app.listen(process.env.PORT)
+app.listen(PORT, () => {
+    console.log('Servidor iniciado na porta ' + PORT);
+})
