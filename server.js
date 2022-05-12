@@ -9,10 +9,10 @@ const PORT = process.env.PORT || 8080;
 // nome da pasta no dist que será feito o build
 const appName = 'bankline-app';
 
-app.use(express.static(__dirname + '/dist/' + appName));
+app.use(express.static(__dirname + '/dist/bankline-app'));
 
 app.get('/*', (req, res) => {
-    res.sendFile(__dirname + '/dist/' + appName + '/index.html');
+    res.sendFile(__dirname + '/dist/bankline-app/index.html');
 });
 
 app.listen(PORT, () => {
