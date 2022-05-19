@@ -7,6 +7,7 @@ const baseUrl = 'https://bankline-api-diogenes.herokuapp.com';
 @Injectable({
   providedIn: 'root'
 })
+
 export class CorrentistaService {
   constructor(private http: HttpClient) { }
 

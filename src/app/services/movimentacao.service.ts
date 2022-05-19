@@ -7,6 +7,7 @@ const baseUrl: string = 'https://bankline-api-diogenes.herokuapp.com';
 @Injectable({
   providedIn: 'root'
 })
+
 export class MovimentacaoService {
 
 
