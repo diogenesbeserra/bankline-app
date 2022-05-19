@@ -1,3 +1,16 @@
+# Santander Dev Week
+
+### Front-end web APP Angular
+
+Simulando um extrato bancário onde temos correntista e movimentações em sua conta. Neste mesmo projeto do santander dev week vamos criar uma aplicação web e uma mobile para consumir essa API.
+
+Utilizamos JavaScript, Angular, node.js, TypeScript, VS Code
+
+
+Subimos para o heroku para testes globais: https://bankline-app-diogenes.herokuapp.com/
+
+
+
 # BanklineApp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.5.
